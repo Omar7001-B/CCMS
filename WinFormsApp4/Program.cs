@@ -14,5 +14,6 @@ namespace WinFormsApp4
             ApplicationConfiguration.Initialize();
             Application.Run(new Login_Page());
         }
+        // Test is a random comment
     }
 }
