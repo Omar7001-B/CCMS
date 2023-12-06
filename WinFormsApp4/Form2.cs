@@ -42,7 +42,7 @@ namespace WinFormsApp4
       else
       {
         string confirmed_pass = this.cpass_txtbox.Text;
-        if(ValidationMethods.password(emp,confirmed_pass,this)){
+        if(ValidationMethods.password(emp,confirmed_pass)){
           DataBaseMethods.AddEmployee(emp);
           Application.OpenForms[0].Show();
           this.Close();

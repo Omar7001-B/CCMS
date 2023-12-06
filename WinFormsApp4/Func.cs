@@ -26,18 +26,18 @@ namespace funcs
         empty_ent.Add("Password");
       return empty_ent;
     }
-    public static void password(EmployeeTable emp, string confirmed_pass,Form form){
-        if (emp.password == confirmed_pass)
-        {
-          DataBaseMethods.addEmployee(emp);
-          MessageBox.Show("Done", "Registration complete", MessageBoxButtons.OK,
-          MessageBoxIcon.Information);
-        }
-        else
-        {
-          MessageBox.Show("Regeister not complete, please check that password is the same as comfirmed passwoard"
-              , "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        }
+    public static bool password(EmployeeTable emp, string confirmed_pass)
+    {
+      if (emp.password == confirmed_pass)
+      {
+        DataBaseMethods.addEmployee(emp);
+        MessageBox.Show("Done", "Registration complete", MessageBoxButtons.OK,
+        MessageBoxIcon.Information);
+        return true;
+      }
+      MessageBox.Show("Regeister not complete, please check that password is the same as comfirmed passwoard"
+          , "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+      return false;
     }
   }
   public static class DataBaseMethods
