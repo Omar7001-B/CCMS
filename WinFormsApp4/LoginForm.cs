@@ -1,10 +1,4 @@
-﻿
-// elaraby test 21
-using System.Collections.Specialized;
-using WinFormsApp4.data;
-using WinFormsApp4;
-
-namespace WinFormsApp4
+﻿namespace WinFormsApp4
 {
     public partial class Login_Page : Form
     {
@@ -26,12 +20,12 @@ namespace WinFormsApp4
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void login_Click(object sender, EventArgs e)
         {
 
            //MessageBox.Show(Environment.GetEnvironmentVariable("CONNECTION_STRING"));
             string user_name_in = textBox1.Text;
-            string password_in = textBox2.Text;
+            string password_in = PassBox.Text;
             if (!string.IsNullOrWhiteSpace(user_name_in) &&
                 !string.IsNullOrWhiteSpace(password_in))
             {
@@ -54,16 +48,11 @@ namespace WinFormsApp4
                 MessageBox.Show("please enter user name and password");
             }
             textBox1.Text = "";
-            textBox2.Text = "";
+            PassBox.Text = "";
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void EnsureCon_Click(object sender, EventArgs e)
         {
  
             if (db.Database.EnsureCreated())
@@ -75,15 +64,11 @@ namespace WinFormsApp4
                 MessageBox.Show("connection is already done");
             }
         }
-
         private void Login_Page_Load(object sender, EventArgs e)
         {
 
         }
   
-    // comment 
-    
     }
 }
 
-// mohamed elaraby khled abaas

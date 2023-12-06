@@ -31,12 +31,12 @@ namespace WinFormsApp4
         private void InitializeComponent()
         {
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
+            PassBox = new TextBox();
+            UserLabel = new Label();
+            PassLabel = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
-            button2 = new Button();
+            EnsureCon = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -50,36 +50,36 @@ namespace WinFormsApp4
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // PassBox
             // 
-            textBox2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(270, 217);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(251, 48);
-            textBox2.TabIndex = 1;
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            PassBox.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            PassBox.Location = new Point(270, 217);
+            PassBox.Multiline = true;
+            PassBox.Name = "textBox2";
+            PassBox.PasswordChar = '*';
+            PassBox.Size = new Size(251, 48);
+            PassBox.TabIndex = 1;
+            PassBox.TextAlign = HorizontalAlignment.Center;
             // 
-            // label1
+            // UserLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(318, 68);
-            label1.Name = "label1";
-            label1.Size = new Size(158, 37);
-            label1.TabIndex = 2;
-            label1.Text = "User Name";
+            UserLabel.AutoSize = true;
+            UserLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            UserLabel.Location = new Point(318, 68);
+            UserLabel.Name = "label1";
+            UserLabel.Size = new Size(158, 37);
+            UserLabel.TabIndex = 2;
+            UserLabel.Text = "User Name";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(318, 177);
-            label2.Name = "label2";
-            label2.Size = new Size(139, 37);
-            label2.TabIndex = 3;
-            label2.Text = "Password";
+            PassLabel.AutoSize = true;
+            PassLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            PassLabel.Location = new Point(318, 177);
+            PassLabel.Name = "label2";
+            PassLabel.Size = new Size(139, 37);
+            PassLabel.TabIndex = 3;
+            PassLabel.Text = "Password";
             // 
             // button1
             // 
@@ -90,7 +90,6 @@ namespace WinFormsApp4
             button1.TabIndex = 4;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -106,28 +105,28 @@ namespace WinFormsApp4
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.ControlDarkDark;
-            button2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(567, 401);
-            button2.Name = "button2";
-            button2.Size = new Size(221, 37);
-            button2.TabIndex = 6;
-            button2.Text = "Check Connection";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click_1;
+            EnsureCon.BackColor = SystemColors.ControlDarkDark;
+            EnsureCon.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            EnsureCon.ForeColor = SystemColors.ButtonHighlight;
+            EnsureCon.Location = new Point(567, 401);
+            EnsureCon.Name = "button2";
+            EnsureCon.Size = new Size(221, 37);
+            EnsureCon.TabIndex = 6;
+            EnsureCon.Text = "Check Connection";
+            EnsureCon.UseVisualStyleBackColor = false;
+            EnsureCon.Click += EnsureCon_Click;
             // 
             // Login_Page
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(EnsureCon);
             Controls.Add(linkLabel1);
             Controls.Add(button1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
+            Controls.Add(PassLabel);
+            Controls.Add(UserLabel);
+            Controls.Add(PassBox);
             Controls.Add(textBox1);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "Login_Page";
@@ -141,11 +140,11 @@ namespace WinFormsApp4
         #endregion
 
         private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label1;
-        private Label label2;
+        private TextBox PassBox;
+        private Label UserLabel;
+        private Label PassLabel;
         private Button button1;
         private LinkLabel linkLabel1;
-        private Button button2;
+        private Button EnsureCon;
     }
 }
